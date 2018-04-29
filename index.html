@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>book</title>
+    <script>
+      (function(){
+        function setBaseFontSize() {
+          let base=640,
+            win=document.documentElement||document.body,
+            winW=win.clientWidth;
+          win.style.fontSize=winW>base?"100px":(winW/640*100+"px");
+        }
+        setBaseFontSize();
+        window.onresize=setBaseFontSize;
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

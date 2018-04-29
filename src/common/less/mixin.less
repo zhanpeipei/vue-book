@@ -1,0 +1,18 @@
+@import "variable";
+.list(@display:flex,@direction:row,@wrap:nowrap){
+  display: @display;
+  flex-flow: @direction @wrap;
+}
+.nowrap(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.clearfix::after,.clearfix::before{
+  content:" ";
+  display:table;
+  font-size: 0;
+}
+.clearfix:after {
+  clear: both;
+}

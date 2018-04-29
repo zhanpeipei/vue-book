@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let xhr=new XMLHttpRequest();
+  xhr.open("post","https://ognv1.sqreader.com/index.php?r=pcapi/pcpage/pageinfo");
+  xhr.onreadystatechange=function () {
+    if(xhr.readyState===4&&/^(2|3)\d{2}$/.test(xhr.status)){
+      console.log(xhr.responseText);
+    }
+  }
+  xhr.send("pageId=1&timestamp=1524967371&sign=3579eaefca2a06f5a8e33832d0b4c0d5")
+</script>
+</body>
+</html>
